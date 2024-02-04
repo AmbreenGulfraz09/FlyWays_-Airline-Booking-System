@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Bookings | FlyWays</title>
+    <link rel="stylesheet" href="static/CSS/styles.css">
+</head>
+<body class="search-body">
+    <form class="search-form" action="/search-bookings" method="post" id="searchForm">
+        <div class="heading-search">Search Your Bookings</div>
+        <div class="form-group">
+            <label for="order_id" class="h-form">Flight ID</label>
+            <input type="text" class="form-control" id="order_id" name="order_id" placeholder="123456" required>
+            <div id="error-message" style="color: red; font-size: 12px"></div> <!-- This is the error message element -->
+            <div class="rule">Your Order ID is emailed with booking confirmation.</div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="h-form">Email Address</label>
+            <input type="email" id="emailSearch" class="form-control" id="email" name="email" placeholder="name@gmail.com" required>
+            <div id="error-message3" style="color: #f54545; display: none; margin-left: 10px; font-size: 13px; padding: 0px">Invalid email-(name@gmail.com)</div>
+            <div class="rule">The email address entered during booking.</div>
+        </div>
+        <button type="button" class="srbtn btn btn-primary" id="src-btn">Search</button>
+    </form>
+
+    <script src="static/JS/emailValSearch.js"></script>
+    <script src="static/JS/searchBooking.js"></script>
+</body>
+</html>

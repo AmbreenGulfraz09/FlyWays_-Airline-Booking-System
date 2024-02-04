@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlyWays</title>
+	<link rel="stylesheet" type="text/css" href="static/CSS/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="S-body">
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup log-inp">
+				<form method="post" action="/signIn">
+					<label for="chk" aria-hidden="true" class="label-sl">Sign up</label>
+					<input class="highlight-inp" type="text" name="txt" placeholder="User name" required>
+					<input  class="email highlight-inp" id="email-signIn" type="email" name="email" placeholder="name@gmail.com" required>
+					<div id="error-message" style="color: #f54545; display: none; margin-left: 60px; font-size: 13px; padding: 0px">Invalid email-(name@gmail.com)</div>
+					<input class="highlight-inp" type="password" name="pswd" placeholder="Password" required>
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login log-inp">
+				<form method="POST" action="/login">
+					<label for="chk" aria-hidden="true" class="label-sl">Login</label>
+					<input class="highlight-inp" id="email-login" type="email" name="email" placeholder="name@gmail.com" required>
+					<div id="error" style="color: #f54545; display: none; margin-left: 60px; font-size: 13px; padding: 0px">Invalid email-(name@gmail.com)</div>
+					<input class="highlight-inp" type="password" name="pswd" placeholder="Password" required>
+					<button>Login</button>
+		</form>
+			</div>
+	</div>
+
+<!--JAVA SCRIPT FILE-->
+	<script src="static/JS/index.js"></script>
+</body>
+</html>

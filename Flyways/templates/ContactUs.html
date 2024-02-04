@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+<!--Contact Us page-->
+<div class="contact-us">
+  <h1>Contact Us</h1>
+{% if success_message %}
+        <p>{{ success_message }}</p>
+    {% endif %}
+  <form method="post" action="/contact" class="contact-form" id="form">
+    <input  class="inp" id="name" type="text" name="name" placeholder="name">
+    <input class="inp"  id="email" type="email" name="email" placeholder="name@gmail.com">
+      <div id="error-message3" style="color: #f54545; display: none; margin-left: 10px; font-size: 13px; padding: 0px">Invalid email-(name@gmail.com)</div>
+    <input class="inp"  id="ph-no"type="phone" name="phone" placeholder="0321-1234567">
+    <textarea class="inp"  id="message"name="message" placeholder="Your message" rows="12"></textarea>
+    <button  name="message" class="submit-btn" id="btn">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+    <h3><u>FlyWays - Head Office</u></h3>
+
+    <p>Karachi, Pakistan ( Corporate Head Office)</p>
+    <p>Plot 330-D, Alamgir Rd, Khokan Society Bahadur Yar Jang CHS,</p>
+    <p>For any assistance please contact us 24/7 Customer Support Service</p>
+    <p>UAN Number  <u>(021) 111 172 782</u></p>
+  </div>
+</div>
+<!--Footer-->
+<div class="footer">
+
+    <div class="lower-footer">
+        <p>Copyright 2023 FlyWays Private Limited. All rights reserved.</p>
+    </div>
+</div>
+
+<!--email recieving code&ndash;&gt;-->
+{% block script %}
+ <script src="static/JS/confirmation.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("Uv_-qHKub8JAyucxS");
+        })();
+    </script>
+<script src="static/JS/emailValidation.js"></script>
+{% endblock script %}
+{% endblock body %}
