@@ -8,7 +8,7 @@ Flyways is a Python Flask-based web application that allows users to search, vie
 
 - 🔍 **Flight Search**: Enter origin, destination, and date to view available flights.
 - 📅 **Booking System**: Users can select and book flights directly through the interface.
-- 🧠 **AI Chatbot**: Ask common travel-related questions and get real-time responses.
+- 🧠 **Chatbot**: Ask common travel-related questions and get real-time responses.
 - ✅ **Unit Testing**: Ensures functionality and reliability across modules.
 - 🎨 **Modern UI**: Built using HTML, CSS, JavaScript, and Bootstrap for responsiveness.
 
